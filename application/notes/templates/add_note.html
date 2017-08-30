@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+  <div>
+    <h2>Add a New Note</h2>
+  </div>
+  <form action="" method="post" name="add_note">
+      {{ form.hidden_tag() }}
+      <p>
+          Title:<br>
+          {{ form.note_title(size=80) }}<br>
+      </p>
+      <p>
+          Description:<br>
+          {{ form.note_description(size=80) }}<br>
+      </p>
+      <p><input type="submit" value="Add"></p>
+  </form>
+</div>
+
+{% endblock %}
